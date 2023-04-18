@@ -1,0 +1,513 @@
+{
+	"info": {
+		"_postman_id": "d59f58d3-db9d-4f0b-86ce-81d3e639e5d3",
+		"name": "petlove",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24201154"
+	},
+	"item": [
+		{
+			"name": "CRUD loai-thu-cung",
+			"item": [
+				{
+					"name": "create loai-thu-cung",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"maLoaiThuCung\":\"ml3\",\r\n    \"tenLoaiThuCung\":\"tl1\",\r\n    \"trangThai\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/petlove/loai-thu-cung",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"petlove",
+								"loai-thu-cung"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "read loai-thu-cung",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/petlove/loai-thu-cung/readOne?maLoai=ml1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"petlove",
+								"loai-thu-cung",
+								"readOne"
+							],
+							"query": [
+								{
+									"key": "maLoai",
+									"value": "ml1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update loai-thu-cung",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"maLoaiThuCung\": \"ml2\",\r\n    \"tenLoaiThuCung\": \"tl2\",\r\n    \"trangThai\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/petlove/loai-thu-cung",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"petlove",
+								"loai-thu-cung"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete loai-thu-cung",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/petlove/loai-thu-cung?maLoai=ml1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"petlove",
+								"loai-thu-cung"
+							],
+							"query": [
+								{
+									"key": "maLoai",
+									"value": "ml1"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "CRUD dich-vu",
+			"item": [
+				{
+					"name": "create dich-vu",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"maDichVu\":\"mdv1\",\r\n    \"tenDichVu\":\"tdv1\",\r\n    \"noiDung\": \"nd1\",\r\n    \"giaDichVus\": [\r\n        {\r\n            \"loaiThuCung\":\"ltc1\",\r\n            \"canNang\": 1.1,\r\n            \"gia\": 20\r\n        }\r\n    ],\r\n    \"trangThai\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/petlove/dich-vu",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"petlove",
+								"dich-vu"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "read dich-vu",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/petlove/dich-vu/readOne?maDV=mdv1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"petlove",
+								"dich-vu",
+								"readOne"
+							],
+							"query": [
+								{
+									"key": "maDV",
+									"value": "mdv1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update dich-vu",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"maDichVu\":\"mdv1\",\r\n    \"tenDichVu\":\"tdv1\",\r\n    \"noiDung\": \"nd1\",\r\n    \"giaDichVus\": [\r\n        {\r\n            \"loaiThuCung\":\"ltc1\",\r\n            \"canNang\": 1.1,\r\n            \"gia\": 20\r\n        }, \r\n{\r\n            \"loaiThuCung\":\"ltc2\",\r\n            \"canNang\": 2.1,\r\n            \"gia\": 30\r\n        }\r\n    ],\r\n    \"trangThai\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/petlove/dich-vu?maDV=mdv1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"petlove",
+								"dich-vu"
+							],
+							"query": [
+								{
+									"key": "maDV",
+									"value": "mdv1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete dich-vu",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/petlove/dich-vu?maDV=mdv1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"petlove",
+								"dich-vu"
+							],
+							"query": [
+								{
+									"key": "maDV",
+									"value": "mdv1"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "CRUD dat-cho",
+			"item": [
+				{
+					"name": "create dat-cho",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"em1@gmail.com\",\r\n    \"thongTinDatChos\":[\r\n        {\r\n            \"dichVu\": \"dv1\",\r\n            \"giaDichVu\": \"20\"\r\n        }\r\n    ],\r\n    \"thoiGian\": \"2023-04-17T17:00:00.000Z\",\r\n    \"canDan\": \"Khong co can dan\",\r\n    \"trangThaiDatCho\": \"DAT_CHO\",\r\n    \"trangThai\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/petlove/dat-cho",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"petlove",
+								"dat-cho"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "read dat-cho",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/petlove/dat-cho/readOne?email=em1@gmail.com",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"petlove",
+								"dat-cho",
+								"readOne"
+							],
+							"query": [
+								{
+									"key": "email",
+									"value": "em1@gmail.com"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update dat-cho",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"em1@gmail.com\",\r\n    \"thongTinDatChos\":[\r\n        {\r\n            \"dichVu\": \"dv1\",\r\n            \"giaDichVu\": \"20\"\r\n        }\r\n    ],\r\n    \"thoiGian\": \"2023-04-17T17:00:00.000Z\",\r\n    \"canDan\": \"co can dan\",\r\n    \"trangThaiDatCho\": \"DAT_CHO\",\r\n    \"trangThai\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/petlove/dat-cho",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"petlove",
+								"dat-cho"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete dat-cho",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/petlove/dat-cho?email=em1@gmail.com",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"petlove",
+								"dat-cho"
+							],
+							"query": [
+								{
+									"key": "email",
+									"value": "em1@gmail.com"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "CRUD user",
+			"item": [
+				{
+					"name": "create user",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"dan\",\r\n    \"email\":\"em1@gmail.com\",\r\n    \"password\":\"password\",\r\n    \"dienThoai\":\"0123456789\",\r\n    \"roles\":[\r\n        \"ROLE_ADMIN\"\r\n    ],\r\n    \"trangThai\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/petlove/tai-khoan",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"petlove",
+								"tai-khoan"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "read user",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/petlove/tai-khoan/readOne?email=em1@gmail.com",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"petlove",
+								"tai-khoan",
+								"readOne"
+							],
+							"query": [
+								{
+									"key": "email",
+									"value": "em1@gmail.com"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update user",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"dan 1\",\r\n    \"email\":\"em1@gmail.com\",\r\n    \"password\":\"password\",\r\n    \"dienThoai\":\"0123456789\",\r\n    \"roles\":[\r\n        \"ROLE_ADMIN\"\r\n    ],\r\n    \"trangThai\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/petlove/tai-khoan",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"petlove",
+								"tai-khoan"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete user",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/petlove/tai-khoan?email=em1@gmail.com",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"petlove",
+								"tai-khoan"
+							],
+							"query": [
+								{
+									"key": "email",
+									"value": "em1@gmail.com"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
